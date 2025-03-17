@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PS-Diffusion</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-1 publication-title">PS-Diffusion: Photorealistic Subject-Driven Image Editing with Disentangled
+              Control and Attention</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Weicheng Wang</a><sup>1</sup>
+                <span class="author-block">
+                  <a href="https://exped1230.github.io/" target="_blank">Guoli Jia</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    Zhongqi Zhang</a><sup>1</sup>
+                    <span class="author-block">
+                       Liang Lin</a>,</span>
+                      <span class="author-block">
+                        Jufeng Yang</a><sup>1</sup>,</span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>VCIP & TMCC & DISSec, College of Computer Science, Nankai University</span>
+                    <span class="author-block"><sup>2</sup>Electrical Engineering Department, Tsinghua University</span>
+                    <span class="author-block"><sup>3</sup>School of Computer Science and Engineering, Sun Yat-sen University.</span>
+                    <span class="author-block"><sup>4</sup>Pengcheng Laboratory, Shenzhen</span>
+                    <br>CVPR2025</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/wei-cheng777/PS-Diffusion" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="Tips_font">
+      You can click on the third image to see the edited effect.</div>
+    <div class="container">
+      <!-- 第一行 -->
+      <div class="row">
+          <div class="column">
+              <div class="text"  >source image </div>
+              <img src="./images/2/raw_image.png" alt="静态图片1">
+          </div>
+          <div class="column">
+              <div class="text">reference image</div>
+              <img src="./images/2/reference_image.png" alt="静态图片2">
+          </div>
+          <div class="column">
+              <div class="text">background / edited image</div>
+              <img src="./images/2/gt_back.png" alt="静态图片3" class="replaceable" onclick="replaceImage(this, './images/2/ground_truth.png')">
+          </div>
+      </div>
+
+      <!-- 第二行 -->
+      <div class="row">
+          <div class="column">
+              <img src="./images/3/raw_image.png" alt="静态图片4">
+          </div>
+          <div class="column">
+              <img src="./images/3/reference_image.png" alt="静态图片5">
+          </div>
+          <div class="column">
+            <img src="./images/3/gt_back.png" alt="静态图片6" class="replaceable" onclick="replaceImage(this, './images/3/ground_truth.png')">
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="column">
+          <img src="./images/4/raw_image.png" alt="静态图片4">
+      </div>
+      <div class="column">
+          <img src="./images/4/reference_image.png" alt="静态图片5">
+      </div>
+      <div class="column">
+        <img src="./images/4/gt_back.png" alt="静态图片6" class="replaceable" onclick="replaceImage(this, './images/4/ground_truth.png')">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+          <img src="./images/5/raw_image.png" alt="静态图片4">
+      </div>
+      <div class="column">
+          <img src="./images/5/reference_image.png" alt="静态图片5">
+      </div>
+      <div class="column">
+        <img src="./images/5/gt_back.png" alt="静态图片6" class="replaceable" onclick="replaceImage(this, './images/5/ground_truth.png')">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+          <img src="./images/6/raw_image.png" alt="静态图片4">
+      </div>
+      <div class="column">
+          <img src="./images/6/reference_image.png" alt="静态图片5">
+      </div>
+      <div class="column">
+        <img src="./images/6/gt_back.png" alt="静态图片6" class="replaceable" onclick="replaceImage(this, './images/6/ground_truth.png')">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+          <img src="./images/7/raw_image.png" alt="静态图片4">
+      </div>
+      <div class="column">
+          <img src="./images/7/reference_image.png" alt="静态图片5">
+      </div>
+      <div class="column">
+        <img src="./images/7/gt_back.png" alt="静态图片6" class="replaceable" onclick="replaceImage(this, './images/7/ground_truth.png')">
+      </div>
+    </div>
+    <div class="Tips_font">
+      If you want to know more details, welcome to visit our repository <a href="https://github.com/wei-cheng777/PS-Diffusion" target="_blank">here</a> to view more content!
+  </div>
+</div>
+
+    <script>
+    // JavaScript 函数：替换图片
+      function replaceImage(element, newImagePath) {
+        element.src = newImagePath;
+      }
+    </script>
+      <!-- 更多行可以按需添加 -->
+  </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Diffusion models pre-trained on large-scale paired image-text data achieve significant success in image editing.To convey more fine-grained visual details, subject-driven editing integrates subjects in user-provided reference images into existing scenes.
+However, it is challenging to obtain photorealistic results, which simulate contextual interactions, such as reflections, illumination, and shadows, induced by merging the target object into the source image.
+To address this issue, we propose PS-Diffusion, which ensures realistic and consistent object-scene blending while maintaining invariance of subject appearance during editing.
+Specifically, we first divide the contextual interactions into those occurring in the foreground and the background areas.
+The effect of the former is estimated through intrinsic image decomposition, and the region of the latter is predicted in an additional background effect control branch.
+Moreover, we propose an Effect Attention Module to disentangle the learning processes of interaction and subject, alleviating confusion between them.
+Additionally, we introduce a synthesized dataset, Replace-5K, consisting of 5,000 image pairs with invariant subject and contextual interactions via 3D rendering.
+Extensive quantitative and qualitative experiments on our dataset and two real-world datasets demonstrate that our method achieves state-of-the-art performance. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/pipeline.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/datasets.png" alt="MY ALT TEXT"/>
+
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/figure1.png" alt="MY ALT TEXT"/>
+
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
